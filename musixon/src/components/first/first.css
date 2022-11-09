@@ -1,0 +1,75 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+/* .backroundimg{
+
+  background-image:url(./bg.jpg) ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+   width: 100%;  
+  height: 800px;
+  
+} */ 
+/* html{ 
+  background: url(./bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
+.first-page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.backgrounding{
+  padding : 13px 13px;
+  margin-top:15%;
+  display: flex;
+  width: 30% ;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+#login-button
+{
+  
+  /* background-color: red;
+  position: center;
+  width: 150px;
+  height: 50px;
+  padding : 3px 3px;
+
+  border-radius: 20%; */
+  
+ padding : 13px 13px;
+ background-color: rgb(110, 153, 245);
+ color:rgb(0, 0, 0);
+ font-family: monospace;
+ width: 45%;
+ border:none;
+ margin-right: 9px;
+ font-size: larger;
+ border-radius: 20%;
+}
+
+#signup-button
+{
+  padding : 13px 13px;
+ background-color: rgb(222, 93, 98);
+ color:rgb(0, 0, 0);
+ font-family: monospace;
+ width: 45%;
+ border:none;
+ font-size: larger;
+ border-radius: 20%;
+}
+#login-button:hover{
+  background-color: rgb(26, 85, 224);
+}
+#signup-button:hover{
+  background-color: rgb(213, 7, 65);
+}

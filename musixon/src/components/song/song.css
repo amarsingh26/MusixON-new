@@ -1,0 +1,64 @@
+/* *{
+    color: whitesmoke;
+} */
+.first
+{
+    /* background-image: url(./bg.jfif);  */
+    background-color: black;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: full;
+    padding: 4px ;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+   
+    
+}
+.firstsecond
+{
+   
+    width: full;
+    padding: auto;
+    /* -ms-flex-align: center; */
+text-align: center;
+    align-items: center;
+    flex-direction: column;
+   justify-items: center;
+gap: 20;
+}
+.second{
+position: relative;
+width: full;
+display: flex;
+ direction: row ;
+margin-top: 4px;
+margin-bottom: 4px;
+padding: 4px;
+border:1pt solid;
+border-color: gray;
+border-radius: 90rem;
+
+}
+.secondfirst
+{
+    position: absolute;
+    margin-top: 4px;
+    margin-left: 4px;
+}
+.third
+{
+    width: full;
+   display: flex;
+   flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.songcard
+{
+color: whitesmoke;
+}

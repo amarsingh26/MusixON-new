@@ -1,0 +1,22 @@
+.first{
+    width: full;
+    display:flex;
+    align-items: center;
+    gap:3px;
+    overflow: hidden;
+background-color: grey;
+}
+.firstsecond{
+    width: full;
+    align-items: center;
+    gap: 3px;padding: 4px;
+    display: flex;
+    position: relative;
+    background-color: grey !important;
+}
+.textcolor
+{
+    text-decoration-color: black;
+color: black;
+font: bold;
+}

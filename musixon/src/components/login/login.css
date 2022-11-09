@@ -1,0 +1,13 @@
+.loginpic-container{
+  display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+   
+    width: 50%;
+    padding: 3px 3px;
+}
+.loginpic-container img{
+  height: 520px;
+  width: 380px;
+  border-radius: 10%;
+}

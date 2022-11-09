@@ -1,0 +1,5 @@
+previous commits were done in separate directory 
+new directory made due to large no of conflicts
+
+
+https://github.com/amarsingh26/musixon.git

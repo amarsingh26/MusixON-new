@@ -1,18 +1,24 @@
 
 .main-container{
-    
+  
   
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: rgb(58, 55, 55);
+  background: url(../first/bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 
 }
 .signup-content{
     margin-top: 2%;
-    box-shadow: 11px 12px 13px 12px rgb(206, 207, 207);
+   
     padding-top: 80px;
     border-radius: 60px;
-    background-color: white;
+    background-color: rgb(255, 251, 251);
     width: 60%;
     display: flex;
     align-items: center;
@@ -58,11 +64,11 @@ input{
   
 } 
 .signup-content{
-    background-color: aqua;
-    box-shadow: 11px 12px 13px 12px rgb(121, 127, 127);
+    background-color: rgb(255, 255, 255);
+    /* box-shadow: 11px 12px 13px 12px rgb(227, 234, 234); */
     padding: 0px;
     border-radius: 60px;
-    background-color: white;
+    /* background-color: white; */
     width: 60%;
     height: 80%;
     display: flex;
@@ -86,7 +92,7 @@ input{
   padding: 10px;
   width: 40%;
   
-  /* background-color: aqua; */
+  
 }
 
 .signup-form .input-field{
@@ -133,7 +139,7 @@ input{
 .form-button input{
   margin-top: 20px;
    padding : 13px 13px;
-   background-color: rgb(110, 153, 245);
+   background-color: rgb(90, 124, 234);
    color:rgb(0, 0, 0);
    font-family: monospace;
    width: 50%;

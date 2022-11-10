@@ -1,9 +1,10 @@
 import React from 'react'
-import Navbar from '../../components/navbar/navbar';
+import NavBar from '../../components/navbar/navbar';
 import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect , useState} from 'react';
 export default function Player() {
   const navigate = useNavigate();
+  const[user , setUser]=useState("");
   const requestPlayer = async () =>{
     try{
         const res = await fetch('/player' ,
@@ -17,6 +18,7 @@ export default function Player() {
       });
       
       const data = await res.json();
+      setUser(data.name);
       console.log(data);
       console.log("data here");
       if(res.status === 401 || !data){
@@ -37,7 +39,7 @@ export default function Player() {
   return (
 
     <div>
-      <Navbar />
+      <NavBar name={user} />
       Player</div>
   )
 }

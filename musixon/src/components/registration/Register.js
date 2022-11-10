@@ -53,7 +53,7 @@ const Register = () => {
                         <NavLink to = "/login" className= "signin-link"> Already Registered?</NavLink>
                       </div>
                         <div className='signup-form'>
-                            <h2 className='title'> Sign Up</h2>
+                            <h2 className='title-signup'> Sign Up</h2>
                             <form method = "POST" className='register-form' id='register-form'>
                                 <div className='input-field'>
                                     <label htmlFor="name">

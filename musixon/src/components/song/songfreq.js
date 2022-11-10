@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 import { useEffect } from "react";
 import { actionType } from "../../stateprovider/reducer";
-import { getAllSongs } from "../../api";
+import {  getAllSongsFreq } from "../../api";
 import { useStateValue } from "../../stateprovider/StateProvider";
 import { updateFreq} from "../../api";
 import Player from "./player";
@@ -20,7 +20,7 @@ const SongsComponent = () => {
     useEffect(() => {
 
         if (!allSongs) {
-            getAllSongs().then((data) => {
+            getAllSongsFreq().then((data) => {
                 // console.log(data.data);
                 dispatch({
                     type: actionType.SET_ALL_SONGS,
@@ -37,7 +37,7 @@ const SongsComponent = () => {
                     </div>
 
                     {/* main container */}
-                    <div className="b">
+                    <div class='second' className=" border my-4 p-4 ">
                         <div class='secondfirst' >
                             {/* <p>
                                 <span>count : </span>
@@ -74,13 +74,13 @@ export const SongContainer = ({ data }) => {
 
 
 };
-export const SongCard = ( {data, index }) => {
+export const SongCard = ({ data, index }) => {
 
 
-// console.log(data);
+// console.log(index);
     const [{  songIndex , isSongPlaying }, dispatch] = useStateValue();
 
-    const addSongToContext = () => {
+    const addSongToContext = (data1) => {
         if (!isSongPlaying) {
             dispatch({
                 type: actionType.SET_SONG_PLAYING,
@@ -88,7 +88,6 @@ export const SongCard = ( {data, index }) => {
              
             })
             // console.log(data1);;
-            // console.log(data._id);
             updateFreq(data._id);   
             
         }
@@ -105,7 +104,7 @@ export const SongCard = ( {data, index }) => {
 
     return (
         <motion.div
-            whileTap={{ scale: 0.8}}
+            whileTap={{ scale: 0.8 }}
             initial={{ opacity: 0, translateX: -50 }}
             animate={{ opacity: 1, translateX: 0 }}
             transition={{ duration: 0.3, delay: index * 0.1 }}
@@ -122,7 +121,7 @@ export const SongCard = ( {data, index }) => {
                     className="image"
                 />
          
-            <p className=" my-2">
+            <p className=" my-2">{index+1+": "}
                 {data.name.length > 25 ? `${data.name.slice(0, 25)}` : data.name}
                 <div className=" my-1">{data.artist}</div>
             </p>

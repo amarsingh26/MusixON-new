@@ -1,7 +1,18 @@
+
+.signin{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.signin-form{
+  background-color: white;
+  margin-top: 2px;
+}
 .loginpic-container{
   display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
    
     width: 50%;
     padding: 3px 3px;
@@ -11,3 +22,83 @@
   width: 380px;
   border-radius: 10%;
 }
+.signin-form{
+  
+  padding: 10px;
+  width: 25%;
+  height: 60%;
+  border-radius: 10%;
+  
+   display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* justify-content: center; */ 
+  /* background-color: aqua; */
+}
+
+.signin-form .login-input-field{
+ 
+  position: relative;
+  height: 40px;
+  width: 100%;
+  margin-top: 30px;
+  
+}
+.signin-form h2{
+ 
+  font-family: monospace;
+  font-weight: 600;
+  
+}
+.login-button input{
+   margin-top: 30px;
+   padding : 13px 13px;
+   background-color: rgb(110, 153, 245);
+   color:rgb(0, 0, 0);
+   font-family: monospace;
+   height: 5%;
+   width: 50%;
+   
+   font-size: large;
+}
+.login-button input:hover{
+  
+   background-color: rgb(245, 60, 60);
+}
+.login-form{
+  /* background-color:rgb(110, 153, 245); */
+  width: 80%;
+  padding: 13px 13px 13px 13px;
+  margin-left: 0%;
+}
+.signin-pic img{
+  width: 125px;
+  height: 125px;
+}
+.login-input-field input{
+  position: absolute;
+  height: 100%;
+  width: 90%;
+  padding: 0 35px;
+  left: 9px;
+  border:none;
+  outline: none;
+  font-size: 16px;
+  border-bottom:2px solid #ccc;
+ 
+}
+.login-input-field input:hover{
+  border-bottom-color: rgb(50, 47, 69);
+ 
+}
+ 
+.login-input-field i{
+  position: absolute;
+  top : 10%;
+  left: 0px;
+  transform: translate(-50%);
+  font-size: 20px;
+  
+  color: rgb(20, 15, 15);
+}
+

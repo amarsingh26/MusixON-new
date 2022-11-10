@@ -11,6 +11,15 @@ export const getAllSongs = async () => {
     return null;
   }
 };
+export const getAllSongsFreq = async () => {
+  try {
+    const res = await axios.get(`${baseURL}api/songs/getAllFreq`);
+    return res.data;
+  } catch (error) {
+    return null;
+  }
+};
+
 
 
 
@@ -22,12 +31,17 @@ export const saveNewSong = async (data) => {
     return null;
   }
 };
+export const updateFreq= async(id) =>{
+  // console.log(id);
+  try{
+    const config = {
+      header: {
+        'Content-Type': 'application/json'
+      }
+    }
+    const res = await axios.put(`${baseURL}api/songs/updateFreq/${id}`,config);
+    // return (await res).data;
 
-export const deleteSongById = async (id) => {
-  try {
-    const res = axios.delete(`${baseURL}api/songs/delete/${id}`);
-    return res;
   } catch (error) {
     return null;
-  }
-};
+  }}

@@ -1,9 +1,11 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import NavBar from '../../components/navbar/navbar';
+import { useEffect , useState} from 'react';
 export default function Feed() {
 
   const navigate = useNavigate();
+  const[user,setUser]=useState("");
   const requestFeed = async () =>{
     try{
         const res = await fetch('/feed' ,
@@ -17,6 +19,7 @@ export default function Feed() {
       });
       
       const data = await res.json();
+      setUser(data.name);
       console.log(data);
       console.log("data here");
       if(res.status === 401 || !data){
@@ -36,6 +39,8 @@ export default function Feed() {
      requestFeed();
   } , []);
   return (
-    <div>Feed</div>
+    <div>
+    <NavBar name={user}/>
+    Feed</div>
   )
 }

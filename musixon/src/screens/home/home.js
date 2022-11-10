@@ -12,6 +12,7 @@ import Register from '../../components/registration/Register'
 import Error from '../error';
 import Logout from '../logout/logout';
 
+
 export default function Home() {
   
   return (
@@ -21,7 +22,7 @@ export default function Home() {
 
       <Router>
         <Routes>
-          <Route path ="/" element = {<First />} />
+        <Route path ="/" element = {<First />} />
         <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/library" element={<Library />} />
@@ -31,7 +32,8 @@ export default function Home() {
           <Route path="/player" element={<Player />} />
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/er404" element={<Error />} />
-<Route path="/logout" element={<Logout />} />
+         
+          <Route path="/logout" element={<Logout />} />
         </Routes>
       </Router>
     </div>

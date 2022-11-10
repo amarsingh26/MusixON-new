@@ -30,8 +30,12 @@ const SongSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+    frequency: {
+      type: Number,
+      default:0,
+        }
   },
-  { timestamps: true }
+  // { timestamps: true }
 );
 
 module.exports = mongoose.model("song", SongSchema);

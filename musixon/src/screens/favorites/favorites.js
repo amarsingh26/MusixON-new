@@ -1,8 +1,10 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import NavBar from '../../components/navbar/navbar';
+import { useEffect,useState } from 'react';
 export default function Favorites() {
   const navigate = useNavigate();
+  const[user,setUser]=useState("");
   const requestFavorite = async () =>{
     try{
         const res = await fetch('/favorites' ,
@@ -16,6 +18,7 @@ export default function Favorites() {
       });
       
       const data = await res.json();
+      setUser(data.name);
       console.log(data);
       console.log("data here");
       if(res.status === 401 || !data){
@@ -34,6 +37,8 @@ export default function Favorites() {
      requestFavorite();
   } , []);
   return (
-    <div>Favorites</div>
+    <div>
+    <NavBar name={user}/>
+    Favorites</div>
   )
 }

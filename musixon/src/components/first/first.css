@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 *{
   margin: 0;
   padding: 0;
@@ -12,22 +13,32 @@
   height: 800px;
   
 } */ 
-/* html{ 
+html{ 
   background: url(./bg.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-} */
+}
+
 .first-page{
-  display: flex;
+  display: flex; 
   align-items: center;
   justify-content: center;
-  
+  background: url(./bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  flex-direction: column;
+  /* background-color: black; */
+  height: 100vh;
 }
 .backgrounding{
+  /* background-color: rgb(168, 0, 84); */
   padding : 13px 13px;
-  margin-top:15%;
+  margin-top: 5%;
+  margin-right: 50%;
   display: flex;
   width: 30% ;
   align-items: center;
@@ -49,7 +60,7 @@
  background-color: rgb(110, 153, 245);
  color:rgb(0, 0, 0);
  font-family: monospace;
- width: 45%;
+ width: 30%;
  border:none;
  margin-right: 9px;
  font-size: larger;
@@ -62,14 +73,53 @@
  background-color: rgb(222, 93, 98);
  color:rgb(0, 0, 0);
  font-family: monospace;
- width: 45%;
+ width: 30%;
  border:none;
  font-size: larger;
  border-radius: 20%;
 }
 #login-button:hover{
-  background-color: rgb(26, 85, 224);
+  background-color: rgb(50, 111, 254);
 }
 #signup-button:hover{
   background-color: rgb(213, 7, 65);
+}
+.title{
+    animation-name: moveRight;
+    animation-duration: 5s;
+    color: rgb(213, 77, 77);
+    font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  font-style: italic;
+
+}
+.titletwo{
+  animation-name: moveLeft;
+  animation-duration: 6s;
+  color: rgb(211, 54, 54);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  font-style: italic;
+
+}
+.text{
+  color: whitesmoke;
+  padding:13px 13px;
+  
+  font-size: 25px;
+  margin-right: 50%;
+
+}
+.intro{
+  /* background: brown; */
+  padding:13px 13px;
+  margin-right: 50%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+}
+.text2{
+  width: 38%;
+  color: white;
+  margin-right: 40%;
+  margin-top: 20px;
 }

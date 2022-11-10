@@ -1,0 +1,11 @@
+.error-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+}
+.error-404 h1{
+    font-family: monospace;
+}

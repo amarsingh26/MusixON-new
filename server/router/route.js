@@ -144,15 +144,15 @@ router.post('/login' , async (req , res)=>{
         const token = await userExist.generateAuthToken(); 
         console.log(token);
 
-        res.cookie("jwtoken" , token , {
-            expires:new Date(Date.now()+257890142),
-            httpOnly:true
-        });   
+          
 
         if(!verify){
             return res.status(421).json({error : "Invalid credentials"});
         }else{
-            
+            res.cookie("jwtoken" , token , {
+                expires:new Date(Date.now()+257890142),
+                httpOnly:true
+            }); 
             res.status(201).json({message:"user Signin Successfully"});
         }
         }

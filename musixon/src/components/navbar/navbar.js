@@ -4,11 +4,11 @@ import "./navbar.css";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-// import Na
+import NavDropdown from 'react-bootstrap/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import { useLocation} from 'react-router-dom';
 
-function BasicExample() {
+function NavBar(props) {
   
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
@@ -22,16 +22,36 @@ function BasicExample() {
             <Nav.Link href="/trending" activeClassName="active" eventKey="/">Trending</Nav.Link>
             <Nav.Link href="/player" activeClassName="active" eventKey="/">Player</Nav.Link>
             <Nav.Link href="/favorites" activeClassName="active" eventKey="/">Favorites</Nav.Link>
-            <Nav.Link href="/logout" activeClassName="active" eventKey="/">Logout</Nav.Link>
+            
+           
             {/* <Nav.Link href="/register" activeClassName="active" eventKey="/">SIGNUP</Nav.Link> */}
-             {/* <NavDropdown title={userData.name} id="basic-nav-dropdown"> 
+             {/* <NavDropdown title={props.name} id="basic-nav-dropdown"> 
               <NavDropdown.Item href="/logout">Logout</NavDropdown.Item>
              </NavDropdown> */}
-          </Nav> 
+          </Nav>
+         
+            <Nav className="me-auto"></Nav><Nav className="me-auto"></Nav>
+            <Nav className="me-auto"></Nav><Nav className="me-auto"></Nav>
+            <Nav className="me-auto"></Nav><Nav className="me-auto"></Nav>
+            <Nav className="me-auto"></Nav><Nav className="me-auto"></Nav>
+            <Nav className="me-auto"></Nav><Nav className="me-auto"></Nav>
+            <Nav className="me-auto"></Nav><Nav className="me-auto"></Nav>
+            <Nav className="me-auto"></Nav><Nav className="me-auto"></Nav>
+            <Nav className="me-auto"></Nav><Nav className="me-auto"></Nav>
+            <Nav className="me-auto"></Nav><Nav className="me-auto"></Nav>
+            <Nav className="me-auto"></Nav><Nav className="me-auto"></Nav>
+            <Nav className="me-auto"></Nav><Nav className="me-auto"></Nav>
+            <Nav className="me-auto"></Nav><Nav className="me-auto"></Nav>
+          <Navbar.Brand >{props.name}</Navbar.Brand>
+          <Nav className="me-auto">
+            
+          
+          <Nav.Link href="/logout" activeClassName="active" eventKey="/">Logout</Nav.Link>
+          </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
 }
 
-export default BasicExample;
+export default NavBar;

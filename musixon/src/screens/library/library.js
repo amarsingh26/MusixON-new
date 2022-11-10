@@ -1,11 +1,12 @@
 import React from 'react'
-import Navbar from '../../components/navbar/navbar';
+import NavBar from '../../components/navbar/navbar';
 import Song from '../../components/song/song'
-import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useNavigate, useRouteLoaderData} from 'react-router-dom';
+import { useEffect , useState} from 'react';
 
 export default function Library() {
   const navigate = useNavigate();
+  const [user , setUser] = useState("");
   const requestLibrary = async () =>{
     try{
         const res = await fetch('/library' ,
@@ -19,6 +20,7 @@ export default function Library() {
       });
       
       const data = await res.json();
+      setUser(data.name);
       console.log(data);
       console.log("data here");
       if(res.status === 401 || !data){
@@ -38,7 +40,7 @@ export default function Library() {
   } , []);
   return (
     <div>
-      <Navbar />
+      <NavBar name={user}/>
       <Song />
     </div>
   )

@@ -4,6 +4,7 @@ import '../login/login.css'
 import Sigpic from '../registration/img/signup.jpg';
 import { NavLink} from 'react-router-dom';
 import {useNavigate} from 'react-router-dom';
+import logpic from '../login/img/login.jpg';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -40,15 +41,23 @@ const loginData = async (e)=>{
  }
 }
   return (
-    <> <section className='signup'>
-    <div className='main-container'>
-        <div className='signup-content'>
-          
-            <div className='signup-form'>
-                <h2 className='title'> Sign In</h2>
-                <form method = "POST" className='register-form' id='register-form'>
-                    
-                     <div className='input-field'>
+    <> <section className='signin'>
+     <div className='main-container'>
+        {/* <div className='signup-content'>
+        <div className='loginpic-container'>
+            <img src = {Sigpic} alt = "signup image"></img>
+            
+          </div>  */}
+            <div className='signin-form'>
+                 
+                <div className='signin-pic'>
+                    <img src = {logpic} alt = " "/>;
+
+                </div>
+                <form method = "POST" className='login-form' id='login-form'>
+                    {/* <h2 className='signin-title'> Sign In</h2> */}
+                    <div className='login-input'>
+                    <div className='login-input-field'>
                         <label htmlFor="email">
                             <i className='zmdi zmdi-email material-icons-name'></i>
                         </label>
@@ -58,7 +67,7 @@ const loginData = async (e)=>{
                          placeholder="your email" />
 
                      </div>
-                     <div className='input-field'>
+                     <div className='login-input-field'>
                         <label htmlFor="password">
                             <i className='zmdi zmdi-lock material-icons-name'></i>
                         </label>
@@ -68,19 +77,22 @@ const loginData = async (e)=>{
                         placeholder="your password" />
 
                      </div>
-                     <div className='form-button'>
+                    </div>
+                     
+                     <div className='login-button'>
                         <input type= "submit" name = "signin" id = "signin" className='btn' value="Sign In"
                         onClick={loginData} />
+                        <div className='register-link'>
+                        <NavLink to = "/register" className= "signin-link"> Create an account </NavLink>
+                        </div>
+                        
                      </div>
                 </form>
             </div>
-            <div className='loginpic-container'>
-            <img src = {Sigpic} alt = "signup image"></img>
-            <NavLink to = "/register" className= "signin-link"> Create an account </NavLink>
-          </div>
-
-        </div>
-    </div>
+           
+{/* 
+        </div>*/}
+    </div> 
 </section>
 
       

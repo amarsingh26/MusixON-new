@@ -1,4 +1,4 @@
-.first{
+/* .first{
     width: full;
     display:flex;
     align-items: center;
@@ -13,10 +13,10 @@ background-color: grey;
     display: flex;
     position: relative;
     background-color: grey !important;
-}
+} */
 .textcolor
 {
-    text-decoration-color: black;
-color: black;
+   
+color: whitesmoke;
 font: bold;
 }

@@ -22,7 +22,7 @@ function NavBar(props) {
             <Nav.Link href="/trending" activeClassName="active" eventKey="/">Trending</Nav.Link>
             <Nav.Link href="/player" activeClassName="active" eventKey="/">Player</Nav.Link>
             <Nav.Link href="/favorites" activeClassName="active" eventKey="/">Favorites</Nav.Link>
-            
+            <Nav.Link href="/contact" activeClassName="active" eventKey="/">Contact Us</Nav.Link>
            
             {/* <Nav.Link href="/register" activeClassName="active" eventKey="/">SIGNUP</Nav.Link> */}
              {/* <NavDropdown title={props.name} id="basic-nav-dropdown"> 

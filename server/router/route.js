@@ -96,6 +96,8 @@ const cookeParser = require('cookie-parser');
 router.use(cookeParser());
 require('../db/conn');
 const User = require('../models/schema');
+const Contact = require('../models/contacts');
+
 const { response } = require('express');
 router.get('/' , (req, res) =>{
     res.send("server is responding");
@@ -185,6 +187,32 @@ router.get('/player', authenticate  ,(req,res)=>{
 router.get('/favorites', authenticate  ,(req,res)=>{
     console.log("This is favorites");
     res.send(req.userExst);
+})
+router.get('/contact', authenticate  ,(req,res)=>{
+
+    console.log("This is Contact");
+    res.send(req.userExst);
+}) 
+router.post('/submitmessage' , async(req , res)=>{
+    const{name , phone, email, message} = req.body;
+    if(!name || !phone || !email || !message){
+        return res.status(422).json({error: "complete the details"});
+    }
+    try{
+
+    
+        const cont = new Contact({name , phone , email ,message});
+
+        await cont.save();
+        return res.status(201).json({message:"Message sent successfuly"});
+        
+     
+    
+    
+    }catch(err){
+        console.log(err);
+    }
+    
 })
 router.get('/logout', function(req, res){
     res.clearCookie('jwtoken');

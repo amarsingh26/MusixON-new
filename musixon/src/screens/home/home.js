@@ -11,7 +11,7 @@ import Login from '../../components/login/login'
 import Register from '../../components/registration/Register'
 import Error from '../error';
 import Logout from '../logout/logout';
-
+import ContactUs from '../contactUs/contactUs';
 
 export default function Home() {
   
@@ -34,6 +34,7 @@ export default function Home() {
           <Route path="/er404" element={<Error />} />
          
           <Route path="/logout" element={<Logout />} />
+          <Route path="/contact" element={<ContactUs />} />
         </Routes>
       </Router>
     </div>

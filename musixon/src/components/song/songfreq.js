@@ -37,7 +37,7 @@ const SongsComponent = () => {
                     </div>
 
                     {/* main container */}
-                    <div class='second' className=" border my-4 p-4 ">
+                    <div class='second' className="b ">
                         <div class='secondfirst' >
                             {/* <p>
                                 <span>count : </span>

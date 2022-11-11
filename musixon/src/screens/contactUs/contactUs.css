@@ -1,0 +1,47 @@
+.contact{
+
+    height: 100vh;
+    background: url(../../components/first/bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+   
+    align-items: center;
+    flex-direction: column;
+}
+.text-center{
+    margin-top: 5%;
+    display: flex;
+   
+color: antiquewhite;
+ font-family: monospace;
+ 
+
+}
+.form{
+    
+    display: flex;
+     width: 50%;
+    align-items: center;
+    flex-direction: column;
+}
+.contact-input{
+    margin: 30px 0;
+    width: 80%;
+    font-size: 15px;
+    border: 2px solid grey;
+    border-radius: 6px;
+    padding: 5px 3px;
+}
+.contact-btn{
+     background-color: rgb(241, 35, 90);
+     padding: 13px 13px;
+     border: none;
+     border-radius: 10%;
+     width: 30%;
+}
+.contact-btn:hover{
+    background-color: rgb(201, 10, 10);
+}

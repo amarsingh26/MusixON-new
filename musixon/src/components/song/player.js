@@ -12,7 +12,7 @@ import "./player.css";
 
 
 const Player = () => {
-  const [isPlayList, setIsPlayList] = useState(false);
+  
   const [{ allSongs, songIndex, isSongPlaying }, dispatch] =
     useStateValue();
 
@@ -89,7 +89,7 @@ const Player = () => {
           </p>
          
         </div>
-        <div className="">
+        <div className="button">
           <AudioPlayer
             src={allSongs[songIndex]?.songUrl}
             onPlay={() => console.log("is playing")}
@@ -97,7 +97,8 @@ const Player = () => {
             showSkipControls={true}
             onClickNext={nextTrack}
             onClickPrevious={previousTrack}
-          />
+          
+            className="button"/>
         </div>
         <div className="h-full flex items-center justify-center flex-col gap-3">
           <motion.i whileTap={{ scale: 0.8 }} onClick={closeMusicPlayer}>

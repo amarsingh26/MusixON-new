@@ -1,12 +1,14 @@
 import React from 'react'
 import NavBar from '../../components/navbar/navbar';
-import Song from '../../components/song/song'
+import Songs from '../../components/song/song'
 import { useNavigate, useRouteLoaderData} from 'react-router-dom';
 import { useEffect , useState} from 'react';
 
 export default function Library() {
   const navigate = useNavigate();
   const [user , setUser] = useState("");
+ 
+//  console.log(user);
   const requestLibrary = async () =>{
     try{
         const res = await fetch('/library' ,
@@ -21,7 +23,9 @@ export default function Library() {
       
       const data = await res.json();
       setUser(data.name);
-      console.log(data);
+      // userId= data._id;
+      // console.log(userId);
+      
       console.log("data here");
       if(res.status === 401 || !data){
         const error = new Error(res.error);
@@ -39,9 +43,11 @@ export default function Library() {
      requestLibrary();
   } , []);
   return (
+
     <div>
+      
       <NavBar name={user}/>
-      <Song />
+      <Songs   />
     </div>
   )
 }

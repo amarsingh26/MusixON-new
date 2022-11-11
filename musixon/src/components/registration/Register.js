@@ -115,7 +115,7 @@ const Register = () => {
                                      placeholder=" Confirm your password" />
 
                                  </div>
-                                 <div className='form-button button'>
+                                 <div className='register-button'>
                                     <input type= "submit" name = "signup" id = "signup" className='btn' value="Register"
                                     onClick={sendData} />
                                  </div>

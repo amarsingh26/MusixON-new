@@ -52,7 +52,7 @@ input{
     outline: none;
    
 }
-.form-button{
+.register-button{
   color: brown;
 }
 .main-container{
@@ -136,7 +136,7 @@ input{
   color: rgb(20, 15, 15);
 }
 
-.form-button input{
+.register-button input{
   margin-top: 20px;
    padding : 13px 13px;
    background-color: rgb(90, 124, 234);
@@ -145,7 +145,7 @@ input{
    width: 50%;
    font-size: larger;
 }
-.form-button input:hover{
+.register-button input:hover{
   
    background-color: rgb(245, 60, 60);
 }

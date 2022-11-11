@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import { useLocation} from 'react-router-dom';
 
 function NavBar(props) {
-  
+  console.log(props);
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container>

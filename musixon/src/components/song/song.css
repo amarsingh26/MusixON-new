@@ -68,7 +68,9 @@ padding: 10px 10px;
 .songcontainer{
 display: flex;
 flex-direction: row;
+flex-wrap: wrap;
 height :100vh;
+position: relative;
 }
 .image{
     width: 250px;
@@ -86,3 +88,17 @@ height :100vh;
     border: 2px solid black;
     font-family: 'Courier New', Courier, monospace;
 } 
+button{
+    color: red;
+      margin-left: 10px;
+      margin-right: 10px;
+      border :none;
+     background-color: black ;
+      transition: all 0.5s;
+  }
+  button:hover{
+      transform: translateY(-5px);
+  }
+  .one{
+    position: relative;
+  }

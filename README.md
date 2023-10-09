@@ -1,4 +1,4 @@
-# MusixON-new
+# MusixON
   Welcome to the MusixON- Music Player  repository! This project aims to create a user-friendly and efficient platform to listen songs , manage playlists .
 
 ## Features 
